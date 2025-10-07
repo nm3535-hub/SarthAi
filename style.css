@@ -1,0 +1,123 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 90vh;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background-color: #000;
+    color: #ffd700; /* Gold */
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #ffd700;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+header h1 {
+    display: inline;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 0.8em;
+    margin: 5px 0 0;
+    color: #ccc;
+}
+
+/* Chat Output */
+#chat-output {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #e9ecef;
+}
+
+.message {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    max-width: 80%;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    margin-left: auto; /* Aligns to the right */
+    border-bottom-right-radius: 5px;
+}
+
+.system-message {
+    background-color: #343a40;
+    color: #f8f9fa;
+    margin-right: auto; /* Aligns to the left */
+    border-bottom-left-radius: 5px;
+}
+
+/* Input Area */
+#input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #dee2e6;
+    background-color: #fff;
+}
+
+#promptInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    resize: none; /* Prevents manual resizing */
+    font-size: 1em;
+    height: auto;
+    max-height: 80px; /* Limits the textarea height */
+    overflow-y: auto;
+}
+
+#geminiButton {
+    background-color: #ffd700; /* Gold */
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#geminiButton:hover:not(:disabled) {
+    background-color: #ffc107;
+}
+
+#geminiButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
